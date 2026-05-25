@@ -1,0 +1,28 @@
+{
+    "presets": [
+        {
+            "view": {
+                "definition": "site:orderSummaryContentlayout",
+                "type": "component",
+                "dataProviders": [
+                    {
+                        "definition": "sfdc_cms__commerceOrderDetailDataProvider",
+                        "type": "dataProvider",
+                        "sfdcExpressionKey": "Order",
+                        "attributes": {
+                            "recordId": "{!Route.recordId}"
+                        }
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "content",
+                        "title": "Content",
+                        "type": "region",
+                        "children": []
+                    }
+                ]
+            }
+        }
+    ]
+}

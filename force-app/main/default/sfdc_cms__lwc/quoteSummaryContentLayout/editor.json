@@ -1,0 +1,28 @@
+{
+    "presets": [
+        {
+            "view": {
+                "definition": "site:quoteSummaryContentLayout",
+                "type": "component",
+                "dataProviders": [
+                    {
+                        "definition": "sfdc_cms__commerceQuoteDetailDataProvider",
+                        "type": "dataProvider",
+                        "sfdcExpressionKey": "QuoteDetail",
+                        "attributes": {
+                            "recordId": "{!Route.recordId}"
+                        }
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "content",
+                        "title": "Content",
+                        "type": "region",
+                        "children": []
+                    }
+                ]
+            }
+        }
+    ]
+}

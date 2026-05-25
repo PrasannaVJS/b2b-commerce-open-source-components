@@ -1,0 +1,17 @@
+{
+    "presets": [
+        {
+            "view": {
+                "definition": "site:checkoutLayoutAccordionDual",
+                "type": "component",
+                "children": [
+                    {
+                        "name": "content",
+                        "type": "region",
+                        "children": []
+                    }
+                ]
+            }
+        }
+    ]
+}

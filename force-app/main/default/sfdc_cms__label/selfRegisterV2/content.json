@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__label",
+  "title" : "selfRegisterV2",
+  "contentBody" : {
+    "labels" : [ {
+      "name" : "genericError",
+      "value" : "The system is unable to proceed with your request."
+    } ]
+  },
+  "urlName" : "selfregisterv2"
+}

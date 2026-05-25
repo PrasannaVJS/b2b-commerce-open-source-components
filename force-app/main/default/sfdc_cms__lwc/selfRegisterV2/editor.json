@@ -1,0 +1,57 @@
+{
+    "presets": [
+        {
+            "view": {
+                "definition": "site:selfRegisterV2",
+                "type": "component",
+                "attributes": {
+                    "cancelLinkLabel": "Already have an account?",
+                    "confirmPasswordLabel": "Confirm Password",
+                    "emailLabel": "Email",
+                    "firstnameLabel": "First Name",
+                    "includePasswordField": true,
+                    "lastnameLabel": "Last Name",
+                    "createPasswordLabel": "Create Password",
+                    "regConfirmUrl": "./CheckPasswordResetEmail",
+                    "submitButtonLabel": "Sign Up",
+                    "rawInternationalizationData": "{!I18n.Countries}",
+                    "consentData": "{!Marketing.Subscriptions}"
+                },
+                "dataProviders": [
+                    {
+                        "definition": "sfdc_cms:commerceI18nDataProvider",
+                        "sfdcExpressionKey": "I18n",
+                        "attributes": {
+                            "excludeCountries": true
+                        },
+                        "type": "dataProvider"
+                    },
+                    {
+                        "definition": "sfdc_cms:commerceMarketingConsentDataProvider",
+                        "sfdcExpressionKey": "Marketing",
+                        "attributes": {
+                            "consentExperience": "ProfileAndRegistration"
+                        },
+                        "type": "dataProvider"
+                    }
+                ],
+                "children": [
+                    {
+                        "name": "emailConsentOptionsFooterText",
+                        "title": "emailConsentOptionsFooterText",
+                        "type": "region",
+                        "children": [
+                            {
+                                "definition": "community_builder:richTextEditor",
+                                "type": "component",
+                                "attributes": {
+                                    "richTextValue": "<p><a href=\"{!Site.basePath}/privacy-policy\" rel=\"noopener noreferrer\" target=\"_blank\"><u>Privacy Policy</u> and <a href=\"{!Site.basePath}/terms-and-conditions\" rel=\"noopener noreferrer\" target=\"_blank\"><u>Terms and Conditions</u></a></p>"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

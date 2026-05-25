@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+  <masterLabel>Self Registration</masterLabel>
+  <description>Displays the Self Registration form.</description>
+  <apiVersion>67</apiVersion>
+  <isExposed>true</isExposed>
+  <capabilities>
+    <capability>lightning__ServerRenderableWithHydration</capability>
+  </capabilities>
+  <targets>
+    <target>lightningCommunity__Page</target>
+    <target>lightningCommunity__Default</target>
+  </targets>
+  <targetConfigs>
+    <targetConfig targets="lightningCommunity__Page">
+      <paletteSection>Open Code</paletteSection>
+    </targetConfig>
+    <targetConfig targets="lightningCommunity__Default">
+      <property name="firstnameLabel" type="String" default="First Name" required="true" translatable="true" label="First Name Label" description="The label for the field where a user enters a first name."></property>
+      <property name="lastnameLabel" type="String" default="Last Name" required="true" translatable="true" label="Last Name Label" description="The label for the field where a user enters a last name."></property>
+      <property name="emailLabel" type="String" default="Email" required="true" translatable="true" label="Email Label" description="The label for the field where a user enters a valid email address."></property>
+      <property name="createPasswordLabel" type="String" default="Create Password" required="true" translatable="true" label="Create Password Label" description="The label for the field where a user requests a new password."></property>
+      <property name="showPhoneNumberField" type="Boolean" label="Show Phone Number Field" default="true" required="true"></property>
+      <property name="phoneNumberLabel" type="String" default="Phone Number" required="true" translatable="true" label="Phone Number Label"></property>
+      <property name="phoneNumberRequired" type="Boolean" default="true" label="Require Phone Number" required="true"></property>
+      <property name="confirmPasswordLabel" type="String" default="Confirm Password" required="true" translatable="true" label="Confirm Password Label" description="The label for the field where users enter a new password, for the second time, to verify their identity."></property>
+      <property name="submitButtonLabel" type="String" default="Sign Up" required="true" translatable="true" label="Submit Button Label" description="The label for the button that a user clicks to request a new account."></property>
+      <property name="cancelLinkLabel" type="String" default="Already have an account?" required="true" translatable="true" label="Cancel Link Label" description="The label for the link that the user clicks to return to the login page."></property>
+      <property name="includePasswordField" type="Boolean" default="true" label="Include Password Field?" description="Require the user to provide a password when registering."></property>
+      <property name="startUrl" type="String" label="Start URL" description="The page users see after registering successfully."></property>
+      <property name="regConfirmUrl" type="String" default="./CheckPasswordResetEmail" required="true" label="Registration Confirmation URL" description="The page users see after successfully registering without a password."></property>
+      <property name="rawInternationalizationData" type="String" default="{!I18n.Countries}" label="Country Data" description="Internationalization data for countries, typically provided by the I18n.Countries data provider."></property>
+      <property name="consentData" type="String" default="{!Marketing.Subscriptions}" label="Marketing Consent Data" description="Marketing consent subscription data, typically provided by the Marketing.Subscriptions data provider."></property>
+      <property name="additionalFields" type="SelfRegisterExtraFieldMapping" label="Additional Fields"></property>
+      <designLayout>
+        <designSection>
+          <designLayoutItems>
+            <designLayoutProperty name="firstnameLabel"></designLayoutProperty>
+            <designLayoutProperty name="lastnameLabel"></designLayoutProperty>
+            <designLayoutProperty name="emailLabel"></designLayoutProperty>
+            <designLayoutProperty name="createPasswordLabel"></designLayoutProperty>
+            <designLayoutProperty name="showPhoneNumberField"></designLayoutProperty>
+            <designLayoutProperty name="phoneNumberLabel"></designLayoutProperty>
+            <designLayoutProperty name="phoneNumberRequired"></designLayoutProperty>
+            <designLayoutProperty name="confirmPasswordLabel"></designLayoutProperty>
+            <designLayoutProperty name="submitButtonLabel"></designLayoutProperty>
+            <designLayoutProperty name="cancelLinkLabel"></designLayoutProperty>
+            <designLayoutProperty name="includePasswordField"></designLayoutProperty>
+            <designLayoutProperty name="startUrl"></designLayoutProperty>
+            <designLayoutProperty name="regConfirmUrl"></designLayoutProperty>
+            <designLayoutProperty name="rawInternationalizationData" cbVisibleIf="rawInternationalizationData=false"></designLayoutProperty>
+            <designLayoutProperty name="consentData" cbVisibleIf="consentData=false"></designLayoutProperty>
+            <designLayoutProperty name="additionalFields"></designLayoutProperty>
+          </designLayoutItems>
+        </designSection>
+      </designLayout>
+    </targetConfig>
+  </targetConfigs>
+</LightningComponentBundle>

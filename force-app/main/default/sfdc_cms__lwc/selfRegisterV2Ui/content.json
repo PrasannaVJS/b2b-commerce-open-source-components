@@ -1,0 +1,6 @@
+{
+  "type" : "sfdc_cms__lwc",
+  "title" : "selfRegisterV2Ui",
+  "contentBody" : { },
+  "urlName" : "selfregisterv2ui"
+}

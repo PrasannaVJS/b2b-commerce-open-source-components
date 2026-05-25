@@ -1,0 +1,32 @@
+{
+    "presets": [
+        {
+            "view": {
+                "definition": "site:checkoutLayoutOnepage",
+                "type": "component",
+                "children": [
+                    {
+                        "name": "content",
+                        "type": "region",
+                        "children": []
+                    },
+                    {
+                        "children": [
+                            {
+                                "definition": "site:checkoutSummary",
+                                "type": "component"
+                            },
+                            {
+                                "definition": "site:checkoutSubscriptionPolicyDisclaimer",
+                                "type": "component"
+                            }
+                        ],
+                        "name": "column",
+                        "title": "column",
+                        "type": "region"
+                    }
+                ]
+            }
+        }
+    ]
+}
